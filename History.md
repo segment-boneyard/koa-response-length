@@ -1,4 +1,11 @@
 
+1.1.0 / 2014-01-28
+==================
+
+ * add HEAD support
+ * add history
+ * remove chan dependency
+
 1.0.0 / 2014-01-28
 ==================
 
