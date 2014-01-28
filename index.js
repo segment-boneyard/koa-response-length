@@ -18,6 +18,7 @@ module.exports = function(app){
     yield next;
     
     var ctx = this;
+    if ('HEAD' == ctx.method) return emit(0);
     if (ctx.length) return emit(ctx.length);
     if (ctx.body && ctx.body.length) return emit(ctx.body.length);
     if (!ctx.body) return emit(0);

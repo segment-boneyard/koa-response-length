@@ -97,6 +97,23 @@ describe('responseLength()', function(){
     .expect(302, noop);
   });
   
+  it('should handle HEAD requests', function(done){
+    var app = koa();
+    app.use(responseLength(app));
+    app.use(function*(){
+      this.body = { foo: 'bar' };
+    });
+    
+    app.on('response', function(len){
+      equal(len, 0);
+      done();
+    });
+    
+    request(app.listen())
+    .head('/')
+    .expect(302, noop);
+  });
+  
   it('should pass the context', function(done){
     var ctx;
     var app = koa();
