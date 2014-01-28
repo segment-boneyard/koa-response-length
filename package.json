@@ -1,0 +1,19 @@
+{
+  "name": "koa-response-length",
+  "version": "1.0.0",
+  "description": "Calculate the length of a response",
+  "license": "MIT",
+  "repository": "segmentio/koa-response-length",
+  "dependencies": {
+    "passthrough-counter": "0.0.1",
+    "chan": "~0.3.0"
+  },
+  "devDependencies": {
+    "koa": "~0.3.0",
+    "mocha": "~1.17.1",
+    "supertest": "~0.9.0"
+  },
+  "scripts": {
+    "test": "make test"
+  }
+}
