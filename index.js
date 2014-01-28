@@ -4,7 +4,6 @@
  */
 
 var Counter = require('passthrough-counter');
-var chan = require('chan');
 
 /**
  * Response length middleware.

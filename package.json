@@ -5,8 +5,7 @@
   "license": "MIT",
   "repository": "segmentio/koa-response-length",
   "dependencies": {
-    "passthrough-counter": "0.0.1",
-    "chan": "~0.3.0"
+    "passthrough-counter": "0.0.1"
   },
   "devDependencies": {
     "koa": "~0.3.0",
