@@ -3,6 +3,8 @@
 
   Emit events about response lenghts.
 
+  [![build status](https://secure.travis-ci.org/segmentio/koa-response-length.png)](http://travis-ci.org/segmentio/koa-response-length)
+
 ## Example
 
 ```js
