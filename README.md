@@ -8,7 +8,7 @@
 ```js
 var responseLength = require('koa-response-length');
 
-app.use(responseLength(app));
+app.use(responseLength());
 
 app.use(function*(){
   this.body = someStream();
@@ -28,10 +28,10 @@ $ npm install koa-response-length
 
 ## API
 
-### responseLength(app)
+### responseLength()
 
-  Create a middleware for `app` that makes it emit `response` events whenever a
-  response is done, passing the total response length and koa context.
+  Create a middleware that makes the koa app emit `response` events whenever a
+  response is done, passing both the total response length and it's koa context.
 
 ## License
 

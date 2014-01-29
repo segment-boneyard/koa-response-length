@@ -9,7 +9,7 @@ var Readable = require('stream').Readable;
 describe('responseLength()', function(){
   it('should handle empty bodies', function(done){
     var app = koa();
-    app.use(responseLength(app));
+    app.use(responseLength());
     app.use(function*(){
       this.status = 302;
     });
@@ -26,7 +26,7 @@ describe('responseLength()', function(){
 
   it('should handle buffers', function(done){
     var app = koa();
-    app.use(responseLength(app));
+    app.use(responseLength());
     app.use(function*(){
       this.body = new Buffer('foobar');
     });
@@ -43,7 +43,7 @@ describe('responseLength()', function(){
 
   it('should handle strings', function(done){
     var app = koa();
-    app.use(responseLength(app));
+    app.use(responseLength());
     app.use(function*(){
       this.body = 'foobar';
     });
@@ -60,7 +60,7 @@ describe('responseLength()', function(){
   
   it('should handle streams', function(done){
     var app = koa();
-    app.use(responseLength(app));
+    app.use(responseLength());
     app.use(function*(){
       this.body = Readable();
       this.body._read = function(){
@@ -82,7 +82,7 @@ describe('responseLength()', function(){
   
   it('should handle json', function(done){
     var app = koa();
-    app.use(responseLength(app));
+    app.use(responseLength());
     app.use(function*(){
       this.body = { foo: 'bar' };
     });
@@ -99,7 +99,7 @@ describe('responseLength()', function(){
   
   it('should handle HEAD requests', function(done){
     var app = koa();
-    app.use(responseLength(app));
+    app.use(responseLength());
     app.use(function*(){
       this.body = { foo: 'bar' };
     });
@@ -117,7 +117,7 @@ describe('responseLength()', function(){
   it('should pass the context', function(done){
     var ctx;
     var app = koa();
-    app.use(responseLength(app));
+    app.use(responseLength());
     app.use(function*(){
       ctx = this;
     });

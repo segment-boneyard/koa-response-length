@@ -8,15 +8,15 @@ var Counter = require('passthrough-counter');
 /**
  * Response length middleware.
  *
- * @param {App} app
  * @return {Function}
  * @api public
  */
 
-module.exports = function(app){
+module.exports = function(){
   return function*(next){
     yield next;
     
+    var app = this.app;
     var ctx = this;
     if ('HEAD' == ctx.method) return emit(0);
     if (ctx.length) return emit(ctx.length);
