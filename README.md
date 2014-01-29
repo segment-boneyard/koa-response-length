@@ -1,7 +1,7 @@
 
 # koa-response-length
 
-  Emit events about response lenghts.
+  Emit events about finished requests and their lengths.
 
   [![build status](https://secure.travis-ci.org/segmentio/koa-response-length.png)](http://travis-ci.org/segmentio/koa-response-length)
 
