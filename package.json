@@ -1,5 +1,5 @@
 {
-  "name": "koa-response-length",
+  "name": "@segment/koa-response-length",
   "version": "1.2.0",
   "description": "Calculate the length of a response",
   "license": "MIT",
